@@ -1,0 +1,85 @@
+:root {
+}
+
+::selection {
+    background-color: white;
+}
+.navbar {
+    background-color: white;
+    padding:0.2rem 1rem;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: inherit;
+    min-height: 32px;
+    min-width: 70px;
+
+}
+.navbar-toggler {
+    padding: 0rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    color: black; !important;
+}
+
+.navbar-toggler:active, .navbar-toggler:focus {
+    border: none !important;
+    outline: none !important; /* Remove the outline */
+    box-shadow: none !important; /* Remove the box-shadow */
+    /* Remove the border */
+}
+
+.navbar-collapse {
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to the top */
+    left: -415px; /* Start off the screen to the left */
+    width: 415px; /* Adjust width as needed */
+    height: 100%; /* Full height */
+    background-color: slategray; /* Example background color */
+    transition: left 0.7s; /* Animate the left property */
+}
+
+.navbar-collapse.show {
+    left: 0; /* Move to the left edge of the screen when toggled */
+}
+
+.d-none.d-md-flex .nav-link {
+    color:dimgray;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    white-space: nowrap;
+    margin-top: 15px;
+    word-spacing: -1.5px;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: inline-block !important;
+    }
+}
+
+
+
+
+
+.
+
+
+
+
+

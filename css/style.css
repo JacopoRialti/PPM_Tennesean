@@ -4,6 +4,11 @@
 ::selection {
     background-color: white;
 }
+
+main {
+    padding-top: 62px;
+}
+
 .navbar {
     background-color: white;
     padding:0.2rem 1rem;
@@ -11,6 +16,11 @@
     width: 100%;
     transition: background-color 0.3s;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+a:hover {
+    font-weight: bold; !important;
 }
 
 .navbar-brand {
@@ -42,17 +52,20 @@
 .navbar-collapse {
     position: fixed; /* Fixed positioning */
     top: 0; /* Align to the top */
-    left: -415px; /* Start off the screen to the left */
-    width: 415px; /* Adjust width as needed */
+    left: -500px; /* Start off the screen to the left */
+    width: 500px; /* Adjust width as needed */
     height: 100%; /* Full height */
-    background-color: slategray; /* Example background color */
-    transition: left 0.7s; /* Animate the left property */
+    background-color: white; /* Example background color */
+    transition: left 0.5s; /* Animate the left property */
 }
 
 .navbar-collapse.show {
     left: 0; /* Move to the left edge of the screen when toggled */
 }
 
+.blur-effect {
+    filter: blur(3px);
+}
 .d-none.d-md-flex .nav-link {
     color:dimgray;
     font-family: 'Rubik', sans-serif;
@@ -65,6 +78,116 @@
     margin-top: 15px;
     word-spacing: -1.5px;
 }
+
+
+@media (min-width: 768px) {
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .card-img {
+        position: relative;
+        margin-bottom: 75px;
+    }
+    .card-img .card-body {
+        position: absolute;
+        top: 60%; /* Adjust this value to your preference */
+        left: 0;
+        right: 0;
+        width: 90%; /* Adjust this value to your preference */
+        margin-left: 0;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    .card-img-top .card-body {
+        position: absolute;
+        top: 90%; /* Adjust this value to your preference */
+        left: 0;
+        right: 0;
+        width: 90%; /* Adjust this value to your preference */
+        margin-left: 0;
+        margin-right: 1200px;
+        background-color: white;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 69px;
+    }
+
+    .card-img {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .card-img .card-body {
+        position: absolute;
+        top: 80%; /* Adjust this value to your preference */
+        left: 0;
+        right: 0;
+        width: 90%; /* Adjust this value to your preference */
+        margin-left: 0;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    .card-img-top .card-body {
+        position: absolute;
+        top: 55%; /* Adjust this value to your preference */
+        left: 0;
+        right: 0;
+        width: 90%; /* Adjust this value to your preference */
+        margin-left: 0;
+        margin-right: 1200px;
+        background-color: white;
+        z-index: 1000;
+        max-width: 100%;
+
+    }
+}
+
+
+
+.card-body {
+    padding: 1.30rem;
+    max-width:  350px;
+    font-family: 'Rubik', sans-serif;
+    background: white;
+}
+
+.card-img-top .card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card-title a {
+    color: inherit; /* This will ensure the link has the same color as the text */
+    text-decoration: none; /* This will remove the default underline from the link */
+}
+
+.card-title a:hover {
+    text-decoration: underline cornflowerblue;
+    /* This will underline the link when the cursor is over it */
+    /* This will change the link color to blue when the cursor is over it */
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: dimgray;
+    font-weight: bold;
+}
+
 
 
 @media (min-width: 992px) {

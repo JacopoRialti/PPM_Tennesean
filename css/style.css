@@ -1,4 +1,5 @@
 :root {
+    --myGray : #f8f8f8;
 }
 
 ::selection {
@@ -32,6 +33,7 @@ a:hover {
     min-width: 70px;
 
 }
+
 .navbar-toggler {
     padding: 0rem 1rem;
     font-size: 1.25rem;
@@ -51,7 +53,16 @@ a:hover {
     /* Remove the border */
 }
 
-.navbar-collapse {
+.sticky-row{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.side-bar-collapse{
     position: fixed; /* Fixed positioning */
     top: 0; /* Align to the top */
     left: -500px; /* Start off the screen to the left */
@@ -59,10 +70,123 @@ a:hover {
     height: 100%; /* Full height */
     background-color: white; /* Example background color */
     transition: left 0.5s; /* Animate the left property */
+    overflow-y: auto;
 }
 
-.navbar-collapse.show {
+@media (max-width: 500px) {
+    .side-bar-collapse {
+        width: 100%;
+    }
+}
+
+.side-bar-collapse.show {
     left: 0; /* Move to the left edge of the screen when toggled */
+}
+
+button.bi.bi-chevron-right {
+    border: none;
+    background-color: transparent;
+}
+
+.search-bar-custom {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    font-size: 16px;
+    border-radius: 1px; /* Remove border radius */
+    border-color: black;
+}
+
+.search-bar-custom:focus {
+    background-color: var(--myGray);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-bottom-color: black;
+}
+
+.search-bar-custom:hover {
+    background-color: var(--myGray);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-bottom-color: black;
+}
+
+.element-toggler{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    font-family: "Rubik", sans-serif;
+    padding-left: 15px;
+}
+
+.recent-stories{
+    padding-top: 20px;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.9rem;
+    color: dimgray;
+    padding-left: 20px;
+}
+
+.recent-stories h2{
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+}
+
+.recent-stories h3{
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.recent-stories a {
+    color:inherit;
+    text-decoration: none;
+    text-underline: none;
+}
+
+.recent-stories a:hover {
+    font-weight: normal;
+}
+
+.row-element-toggler:hover .element-toggler {
+    padding-left: 30px; /* Adjust this value as needed */
+    transition: 0.2s; /* Add a transition effect */
+}
+
+.row-element-toggler:hover {
+    background-color: var(--myGray);
+}
+
+.row-element-toggler:hover .element-toggler::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 39px;
+    background-color: cornflowerblue; /* Change this to the color you want for the rectangle */
+    position: absolute;
+    left: 0;
+    transform: translateY(-5px);
+}
+
+ .row-inner{
+    position: relative;
+    transform: translateX(-1000%);
+    font-family: "Rubik", sans-serif;
+    font-size: 1rem;
+     color: dimgrey;
+     font-weight: 400;
+     white-space: nowrap;
 }
 
 .d-none.d-md-flex .nav-link {
@@ -77,8 +201,6 @@ a:hover {
     margin-top: 15px;
     word-spacing: -1.5px;
 }
-
-
 
 @media (min-width: 768px) {
     .card-img-top {
@@ -158,6 +280,10 @@ a:hover {
     background: white;
 }
 
+.card-body {
+    background-color: white;
+}
+
 .card-img-top .card-title {
     font-weight: bold;
     font-size: 1.25rem;
@@ -196,6 +322,78 @@ a:hover {
         display: inline-block !important;
     }
 }
+
+.blue-rectangle {
+    width: 30px;
+    height: 15px;
+    background-color: cornflowerblue;
+}
+
+.title-most {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+    text-underline: none;
+    text-decoration: none;
+}
+
+.unique-row {
+    /* Add your styles here */
+    --bs-gutter-x: 0;
+
+
+}
+.img-fluid-most{
+    padding-left: -0; !important;
+    margin-left: 0; !important;
+    float: left;
+    padding-right: 0;
+    max-width: 100%;
+    min-height: 200px;
+}
+
+.card-body-most{
+    float: left; !important;
+    font-family: 'Rubik', sans-serif;
+    background: white;
+    margin-left: 0;
+    border-width: 20px;
+    border-color: white;
+    min-height: 200px;
+}
+
+.card-body-most .card-title{
+    font-weight: bold;
+    font-size: 1.12rem;
+}
+
+.card-title-list-most {
+    font-weight: bold;
+    font-size: 1.12rem;
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+
+.img-fluid-list-most{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+
+}
+
+#sticky-footer a{
+    color: black;
+    text-decoration: none;
+}
+
+#sticky-footer a:hover{
+    font-weight: normal;
+}
+
 
 
 

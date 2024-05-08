@@ -329,6 +329,23 @@ button.bi.bi-chevron-right {
     background-color: cornflowerblue;
 }
 
+.col-thumbnail {
+    box-shadow: 10px 0 10px -10px rgba(0, 0, 0, 0.1),
+    -10px 0 10px -10px rgba(0, 0, 0, 0.1);
+}
+
+.showMoreThumb{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+font-family: "Rubik", sans-serif;
+    background-color: inherit;
+    border: none;
+}
+.showMoreThumb:disabled {
+    color: gray;
+}
+
 .title-most {
     font-family: "Rubik", sans-serif;
     font-weight: bold;
